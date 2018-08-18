@@ -38,7 +38,7 @@ export class LoginComponent {
         this.router.navigateByUrl('/');
     }
 
-    handleError(error) {
+    handleError(error: any) {
         this.error = error.error.error;
     }
 }
