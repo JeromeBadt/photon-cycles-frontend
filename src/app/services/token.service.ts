@@ -1,13 +1,11 @@
 import { Injectable } from '@angular/core';
+import { environment } from '../../environments/environment';
 
 @Injectable({
     providedIn: 'root'
 })
 export class TokenService {
-    private iss = {
-        login: 'http://photon-cycles.test/api/login',
-        signup: 'http://photon-cycles.test/api/signup'
-    };
+    private baseUrl = environment.baseUrl;
 
     constructor() {
     }
@@ -35,7 +33,7 @@ export class TokenService {
             const payload = this.payload(token);
 
             if (payload) {
-                return Object.values(this.iss).includes(payload.iss);
+                return payload.iss.includes(this.baseUrl.split('//')[1]);
             }
         }
 
