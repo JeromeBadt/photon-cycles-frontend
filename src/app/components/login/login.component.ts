@@ -18,9 +18,9 @@ export class LoginComponent {
     public error = null;
 
     constructor(
+        private router: Router,
         private Jarwis: JarwisService,
         private Token: TokenService,
-        private router: Router,
         private Auth: AuthService
     ) {
     }
