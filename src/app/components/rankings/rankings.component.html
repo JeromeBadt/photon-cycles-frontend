@@ -1,0 +1,45 @@
+<div class="text-center mb-4">
+  <h1 class="h1 mb-4">Rankings</h1>
+</div>
+
+<div align="center">
+  <table class="table table-dark table-borderless table-hover">
+    <thead>
+    <tr>
+      <th scope="col">Rank</th>
+      <th scope="col">Points</th>
+      <th scope="col">Player</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr *ngFor="let ranking of rankings; let i = index">
+      <td>
+        <span class="badge badge-dark">{{i + 1}}</span>
+      </td>
+      <td>{{ranking.points}}</td>
+      <td>{{ranking.playerName}}</td>
+    </tr>
+    </tbody>
+
+    <tfoot>
+    <tr>
+      <th colspan="3">
+        <div class="ui right floated pagination menu">
+          <a class="icon item">
+            <i class="left chevron icon"></i>
+          </a>
+          <a class="item">1</a>
+          <a class="icon item">
+            <i class="right chevron icon"></i>
+          </a>
+        </div>
+      </th>
+    </tr>
+    </tfoot>
+  </table>
+
+  <div class="text-center">
+    <button class="btn btn-lg btn-info col-sm-4 mt-3" routerLink="">Back</button>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+/* Variable overrides go here */
+
+$cyan: #10b497;
+$table-dark-bg: #344b61;
+$table-dark-color: #fff;
+$thead-dark-bg: #22313f;
+
+@import "~bootswatch/dist/superhero/_variables.scss";
+@import "~bootstrap/scss/bootstrap.scss";
+@import "~bootswatch/dist/superhero/_bootswatch.scss";
+@import "~ng-snotify/styles/material.css";
+
+.ng-invalid:not(form) {
+  border-left: 5px solid $danger;
+}
+
+.ng-valid:not(form) {
+  border-left: 5px solid $success;
+}
+
+thead {
+  background-color: $thead-dark-bg;
+}
