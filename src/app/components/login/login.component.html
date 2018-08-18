@@ -4,7 +4,7 @@
     <div class="card-body">
       <form #loginForm=ngForm (ngSubmit)="onSubmit()">
 
-        <div class="alert alert-danger" [hidden]="!error">
+        <div class="alert alert-danger offset-3" [hidden]="!error">
           {{error}}
         </div>
         <div class="form-group row">

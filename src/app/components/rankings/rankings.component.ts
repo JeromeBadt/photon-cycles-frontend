@@ -1,8 +1,8 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 
 export class Rank {
     points: number;
-    @Input() playerName: string;
+    playerName: string;
 
     constructor(points: number, playerName: string) {
         this.points = points;
